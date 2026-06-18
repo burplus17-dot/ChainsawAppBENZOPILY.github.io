@@ -31,14 +31,32 @@
             text-align: center;
         }
 
+        /* ===== ЗАГОЛОВОК С ЛОГОТИПОМ ===== */
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 18px;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+        }
+
+        .header .logo-icon {
+            width: 70px;
+            height: 70px;
+            object-fit: contain;
+            display: inline-block;
+            filter: drop-shadow(2px 4px 8px rgba(0,0,0,0.3));
+        }
+
         h1 {
             font-family: 'Arial Black', 'Impact', sans-serif;
-            font-size: 44px;
+            font-size: 48px;
             font-weight: 900;
             color: #fc4903;
-            margin-bottom: 10px;
             letter-spacing: 2px;
             text-shadow: 3px 3px 0 rgba(0,0,0,0.2);
+            margin: 0;
         }
 
         .subtitle {
@@ -46,6 +64,7 @@
             font-size: 22px;
             font-weight: 700;
             color: #3b3b3b;
+            margin-top: 4px;
             margin-bottom: 45px;
             letter-spacing: 1px;
         }
@@ -153,12 +172,22 @@
                 padding: 35px 20px;
             }
 
+            .header {
+                gap: 12px;
+            }
+
+            .header .logo-icon {
+                width: 50px;
+                height: 50px;
+            }
+
             h1 {
                 font-size: 32px;
             }
 
             .subtitle {
                 font-size: 18px;
+                margin-bottom: 35px;
             }
 
             .section-title {
@@ -192,8 +221,12 @@
 
     <div class="container">
 
-        <h1>СКАЧАЙТЕ</h1>
-        <p class="subtitle">Наше приложение</p>
+        <!-- ===== ЗАГОЛОВОК С ЛОГОТИПОМ ===== -->
+        <div class="header">
+            <img src="chainsaw-icon.png" alt="Бензопила" class="logo-icon" />
+            <h1>СКАЧАЙТЕ</h1>
+        </div>
+        <p class="subtitle">Наше приложение БЕНZОПИЛЫ</p>
 
         <!-- ====== ДЕСКТОП ====== -->
         <div class="section">
