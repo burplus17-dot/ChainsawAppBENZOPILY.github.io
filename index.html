@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Скачать приложение</title>
     <style>
         * {
@@ -10,7 +10,6 @@
             padding: 0;
             box-sizing: border-box;
         }
-
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: #f0f4f8;
@@ -20,7 +19,6 @@
             align-items: center;
             padding: 20px;
         }
-
         .container {
             max-width: 800px;
             width: 100%;
@@ -30,41 +28,31 @@
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.10);
             text-align: center;
         }
-
         h1 {
             font-size: 32px;
             font-weight: 700;
             color: #1a202c;
             margin-bottom: 8px;
         }
-
         .subtitle {
             font-size: 18px;
             color: #4a5568;
             margin-bottom: 40px;
         }
-
         .section {
             margin-bottom: 48px;
         }
-
-        .section:last-child {
-            margin-bottom: 0;
-        }
-
         .section-title {
             font-size: 20px;
             font-weight: 600;
             color: #2d3748;
             margin-bottom: 16px;
         }
-
         .section-desc {
             font-size: 15px;
             color: #718096;
             margin-bottom: 20px;
         }
-
         .download-btn {
             display: inline-block;
             padding: 16px 48px;
@@ -74,108 +62,65 @@
             font-weight: 600;
             text-decoration: none;
             border-radius: 40px;
-            transition: background 0.2s ease, transform 0.1s ease;
+            transition: background 0.2s ease;
             box-shadow: 0 4px 14px rgba(43, 108, 176, 0.35);
         }
-
         .download-btn:hover {
             background: #1a4f8b;
         }
-
-        .download-btn:active {
-            transform: scale(0.96);
-        }
-
-        .qr-wrapper {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
         .qr-image {
             width: 200px;
             height: 200px;
-            background: #e2e8f0;
+            background: #ffffff;
             border-radius: 16px;
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 14px;
-            color: #4a5568;
-            margin-bottom: 14px;
-            border: 2px dashed #cbd5e0;
+            margin: 0 auto 14px;
+            border: 2px solid #e2e8f0;
+            overflow: hidden;
         }
-
-        .qr-label {
-            font-size: 14px;
-            color: #718096;
+        .qr-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
         }
-
         .qr-label a {
             color: #2b6cb0;
             text-decoration: none;
         }
-
         .qr-label a:hover {
             text-decoration: underline;
         }
-
         @media (max-width: 480px) {
-            .container {
-                padding: 30px 20px;
-            }
-
-            h1 {
-                font-size: 26px;
-            }
-
-            .download-btn {
-                padding: 14px 32px;
-                font-size: 16px;
-                width: 100%;
-            }
-
-            .qr-image {
-                width: 160px;
-                height: 160px;
-            }
+            .container { padding: 30px 20px; }
+            h1 { font-size: 26px; }
+            .download-btn { padding: 14px 32px; font-size: 16px; width: 100%; }
+            .qr-image { width: 160px; height: 160px; }
         }
     </style>
 </head>
 <body>
-
     <div class="container">
-
         <h1>📲 Скачайте наше приложение</h1>
         <p class="subtitle">Выберите удобный способ установки</p>
 
-        <!-- ======== ДЕСКТОПНАЯ ВЕРСИЯ ======== -->
         <div class="section">
             <div class="section-title">💻 Для компьютера</div>
-            <p class="section-desc">Скачайте установочный файл для Windows или Mac</p>
+            <p class="section-desc">Скачайте установочный файл для Windows</p>
             <a href="#" class="download-btn">⬇ Скачать для Windows</a>
         </div>
 
-        <!-- ======== МОБИЛЬНАЯ ВЕРСИЯ ======== -->
         <div class="section">
             <div class="section-title">📱 Для телефона</div>
-            <p class="section-desc">Наведите камеру телефона на QR-код или нажмите на ссылку ниже</p>
-
-            <div class="qr-wrapper">
-                <!-- ЗДЕСЬ БУДЕТ ТВОЙ QR-КОД -->
-                <div class="qr-image">
-                    🟦⬛ ЗДЕСЬ ВАШ QR-КОД ⬛🟦
-                    <br /><span style="font-size:12px;">(вставьте картинку)</span>
-                </div>
-
-                <div class="qr-label">
-                    Или скачайте в магазине:<br />
-                    <a href="#">Google Play</a> · <a href="#">App Store</a>
-                </div>
+            <p class="section-desc">Наведите камеру телефона на QR-код</p>
+            <div class="qr-image">
+                <img src="qr-code.png" alt="QR-код для скачивания приложения" />
+            </div>
+            <div class="qr-label">
+                <a href="#">Google Play</a> · <a href="#">App Store</a>
             </div>
         </div>
-
     </div>
-
 </body>
 </html>
