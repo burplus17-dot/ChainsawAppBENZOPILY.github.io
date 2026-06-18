@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Скачать приложение</title>
+    <title>БЕНЗОПИЛЫ — скачать приложение</title>
     <style>
         * {
             margin: 0;
@@ -12,8 +12,8 @@
         }
 
         body {
-            font-family: 'Arial Black', 'Impact', sans-serif;
-            background: #3b3b3b;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background: #1a1a1a;
             min-height: 100vh;
             display: flex;
             justify-content: center;
@@ -22,111 +22,136 @@
         }
 
         .container {
-            max-width: 850px;
+            max-width: 780px;
             width: 100%;
-            background: #b8b8b8;
-            border-radius: 30px;
-            padding: 60px 50px;
-            box-shadow: 0 25px 70px rgba(0, 0, 0, 0.6);
+            background: #f5f5f5;
+            border-radius: 40px;
+            padding: 55px 50px 50px;
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.7);
             text-align: center;
+            transition: 0.3s;
         }
 
-        .header {
+        /* ===== ВЕРХНИЙ БЛОК С ЛОГОТИПОМ ===== */
+        .brand {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 18px;
-            margin-bottom: 10px;
+            gap: 16px;
+            margin-bottom: 8px;
             flex-wrap: wrap;
         }
 
-        .header .logo-icon {
-            width: 70px;
-            height: 70px;
+        .brand .logo {
+            width: 52px;
+            height: 52px;
             object-fit: contain;
             display: inline-block;
-            filter: drop-shadow(2px 4px 8px rgba(0,0,0,0.3));
+            order: 0;
         }
 
-        h1 {
+        .brand h1 {
             font-family: 'Arial Black', 'Impact', sans-serif;
-            font-size: 48px;
+            font-size: 42px;
             font-weight: 900;
             color: #fc4903;
-            letter-spacing: 2px;
-            text-shadow: 3px 3px 0 rgba(0,0,0,0.2);
+            letter-spacing: 1px;
             margin: 0;
+            order: 1;
         }
 
-        .subtitle {
+        .brand .app-name {
             font-family: 'Arial Black', 'Impact', sans-serif;
-            font-size: 22px;
+            font-size: 26px;
             font-weight: 700;
             color: #3b3b3b;
-            margin-top: 4px;
-            margin-bottom: 45px;
             letter-spacing: 1px;
+            margin: 0;
+            order: 2;
         }
 
-        .section {
-            margin-bottom: 50px;
+        .brand .app-name span {
+            color: #fc4903;
         }
 
-        .section:last-child {
+        .sub {
+            font-size: 16px;
+            font-weight: 400;
+            color: #777;
+            margin-top: -4px;
+            margin-bottom: 40px;
+            letter-spacing: 0.3px;
+        }
+
+        /* ===== КАРТОЧКИ ===== */
+        .card {
+            background: #ffffff;
+            border-radius: 28px;
+            padding: 30px 28px 28px;
+            margin-bottom: 28px;
+            box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06);
+            transition: 0.2s;
+        }
+
+        .card:last-child {
             margin-bottom: 0;
         }
 
-        .section-title {
-            font-family: 'Arial Black', 'Impact', sans-serif;
-            font-size: 28px;
-            font-weight: 900;
-            color: #3b3b3b;
-            margin-bottom: 12px;
+        .card-header {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 12px;
+            gap: 14px;
+            margin-bottom: 10px;
         }
 
-        .section-title .icon {
-            width: 44px;
-            height: 44px;
+        .card-header .icon {
+            width: 40px;
+            height: 40px;
             object-fit: contain;
             display: inline-block;
         }
 
-        .section-desc {
-            font-family: 'Arial', sans-serif;
-            font-size: 18px;
-            font-weight: 600;
-            color: #3b3b3b;
+        .card-header h2 {
+            font-family: 'Arial Black', 'Impact', sans-serif;
+            font-size: 26px;
+            font-weight: 700;
+            color: #2d2d2d;
+            letter-spacing: 0.5px;
+        }
+
+        .card-desc {
+            font-size: 17px;
+            font-weight: 400;
+            color: #555;
             margin-bottom: 20px;
+            letter-spacing: 0.2px;
         }
 
         .download-btn {
             display: inline-block;
-            padding: 20px 55px;
+            padding: 16px 48px;
             background: #fc4903;
             color: #fff;
             font-family: 'Arial Black', 'Impact', sans-serif;
-            font-size: 24px;
-            font-weight: 900;
+            font-size: 20px;
+            font-weight: 700;
             text-decoration: none;
-            border-radius: 50px;
+            border-radius: 60px;
             transition: all 0.2s ease;
-            box-shadow: 0 6px 20px rgba(252, 73, 3, 0.5);
-            letter-spacing: 1px;
+            box-shadow: 0 6px 20px rgba(252, 73, 3, 0.35);
+            letter-spacing: 0.5px;
             border: none;
         }
 
         .download-btn:hover {
             background: #d63d00;
-            transform: scale(1.03);
-            box-shadow: 0 8px 30px rgba(252, 73, 3, 0.7);
+            transform: scale(1.02);
+            box-shadow: 0 8px 30px rgba(252, 73, 3, 0.5);
         }
 
         .download-btn:active {
-            transform: scale(0.95);
+            transform: scale(0.96);
         }
 
         .qr-wrapper {
@@ -136,17 +161,18 @@
         }
 
         .qr-image {
-            width: 220px;
-            height: 220px;
+            width: 200px;
+            height: 200px;
             background: #ffffff;
             border-radius: 20px;
             display: flex;
             justify-content: center;
             align-items: center;
-            margin: 0 auto 16px;
-            border: 4px solid #3b3b3b;
+            margin: 0 auto 14px;
+            border: 3px solid #e0e0e0;
             overflow: hidden;
-            box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+            transition: 0.2s;
         }
 
         .qr-image img {
@@ -156,62 +182,64 @@
         }
 
         .qr-label {
-            font-family: 'Arial Black', 'Impact', sans-serif;
-            font-size: 18px;
-            font-weight: 700;
+            font-size: 16px;
+            font-weight: 500;
             color: #3b3b3b;
+            letter-spacing: 0.3px;
         }
 
         .qr-label span {
             color: #fc4903;
+            font-weight: 700;
         }
 
         @media (max-width: 600px) {
             .container {
-                padding: 35px 20px;
+                padding: 30px 20px 28px;
+                border-radius: 28px;
             }
 
-            .header {
-                gap: 12px;
+            .brand .logo {
+                width: 42px;
+                height: 42px;
             }
 
-            .header .logo-icon {
-                width: 50px;
-                height: 50px;
+            .brand h1 {
+                font-size: 30px;
             }
 
-            h1 {
-                font-size: 32px;
+            .brand .app-name {
+                font-size: 20px;
             }
 
-            .subtitle {
-                font-size: 18px;
-                margin-bottom: 35px;
+            .sub {
+                font-size: 14px;
+                margin-bottom: 28px;
             }
 
-            .section-title {
+            .card {
+                padding: 22px 16px 20px;
+                border-radius: 22px;
+            }
+
+            .card-header h2 {
                 font-size: 22px;
-                flex-wrap: wrap;
             }
 
-            .section-title .icon {
-                width: 36px;
-                height: 36px;
+            .card-header .icon {
+                width: 34px;
+                height: 34px;
             }
 
             .download-btn {
-                padding: 16px 30px;
-                font-size: 20px;
+                padding: 14px 28px;
+                font-size: 18px;
                 width: 100%;
             }
 
             .qr-image {
-                width: 170px;
-                height: 170px;
-            }
-
-            .qr-label {
-                font-size: 16px;
+                width: 160px;
+                height: 160px;
             }
         }
     </style>
@@ -220,31 +248,35 @@
 
     <div class="container">
 
-        <div class="header">
-            <img src="chainsaw_icon.ico" alt="Бензопила" class="logo-icon" />
+        <!-- ===== ВЕРХНЯЯ ЧАСТЬ ===== -->
+        <div class="brand">
+            <img src="chainsaw_icon.ico" alt="Бензопила" class="logo" />
             <h1>СКАЧАЙТЕ</h1>
+            <p class="app-name"><span>БЕНЗОПИЛЫ</span></p>
         </div>
-        <p class="subtitle">Наше приложение БЕНZОПИЛЫ</p>
+        <p class="sub">Мобильное приложение для настоящих мастеров</p>
 
-        <div class="section">
-            <div class="section-title">
+        <!-- ===== ДЕСКТОП ===== -->
+        <div class="card">
+            <div class="card-header">
                 <img src="pc-icon.png" alt="ПК" class="icon" />
-                Для компьютера
+                <h2>Для компьютера</h2>
             </div>
-            <p class="section-desc">Установочный файл для Windows</p>
+            <p class="card-desc">Установочный файл для Windows</p>
             <a href="https://drive.google.com/uc?export=download&id=1SOTuzVqSSnjQQ4HMQtT4Qc-n8cYT9X32" class="download-btn">⬇ СКАЧАТЬ</a>
         </div>
 
-        <div class="section">
-            <div class="section-title">
+        <!-- ===== МОБИЛЬНОЕ ===== -->
+        <div class="card">
+            <div class="card-header">
                 <img src="mob-icon.png" alt="Телефон" class="icon" />
-                Для телефона
+                <h2>Для телефона</h2>
             </div>
-            <p class="section-desc">Наведите камеру на QR-код</p>
+            <p class="card-desc">Наведите камеру на QR‑код</p>
 
             <div class="qr-wrapper">
                 <div class="qr-image">
-                    <img src="qr-code.png" alt="QR-код для скачивания" />
+                    <img src="qr-code.png" alt="QR-код" />
                 </div>
                 <div class="qr-label">
                     <span>⬇</span> Сканируйте и устанавливайте
