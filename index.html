@@ -47,7 +47,7 @@
             height: 58px;
             object-fit: contain;
             display: inline-block;
-            order: 2; /* иконка справа */
+            order: 2;
         }
 
         .brand .title-group {
@@ -81,8 +81,68 @@
             font-weight: 500;
             color: #555555;
             margin-top: 8px;
-            margin-bottom: 40px;
+            margin-bottom: 12px;
             letter-spacing: 0.4px;
+        }
+
+        .description {
+            font-size: 16px;
+            font-weight: 400;
+            color: #444444;
+            line-height: 1.6;
+            max-width: 600px;
+            margin: 0 auto 24px auto;
+            background: #eaeaea;
+            padding: 18px 24px;
+            border-radius: 16px;
+            letter-spacing: 0.2px;
+        }
+
+        .description strong {
+            color: #fc4903;
+            font-weight: 700;
+        }
+
+        /* ===== СКРИНШОТЫ ===== */
+        .screenshots {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            align-items: stretch;
+            margin: 0 auto 32px auto;
+            flex-wrap: wrap;
+        }
+
+        .screenshot-item {
+            flex: 1;
+            min-width: 140px;
+            max-width: 280px;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+            background: #ffffff;
+            border: none;
+            transition: transform 0.2s ease;
+        }
+
+        .screenshot-item:hover {
+            transform: scale(1.02);
+        }
+
+        .screenshot-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .screenshot-label {
+            font-size: 13px;
+            font-weight: 600;
+            color: #888;
+            padding: 8px 0 10px;
+            background: #ffffff;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
         }
 
         /* ===== КАРТОЧКИ ===== */
@@ -220,7 +280,29 @@
 
             .slogan {
                 font-size: 15px;
-                margin-bottom: 28px;
+                margin-bottom: 10px;
+            }
+
+            .description {
+                font-size: 14px;
+                padding: 14px 16px;
+                margin-bottom: 18px;
+            }
+
+            .screenshots {
+                gap: 12px;
+                margin-bottom: 24px;
+            }
+
+            .screenshot-item {
+                min-width: 100px;
+                max-width: 160px;
+                border-radius: 18px;
+            }
+
+            .screenshot-label {
+                font-size: 11px;
+                padding: 6px 0 8px;
             }
 
             .card {
@@ -271,6 +353,22 @@
             <img src="chainsaw_icon.ico" alt="Бензопила" class="logo" />
         </div>
         <p class="slogan">Мобильное приложение для настоящих мастеров</p>
+
+        <div class="description">
+            <strong>Управляйте каталогом бензопил</strong> с возможностью добавления, редактирования, удаления, поиска и фильтрации. Экспортируйте данные и пользуйтесь удобным интерфейсом.
+        </div>
+
+        <!-- ===== СКРИНШОТЫ ===== -->
+        <div class="screenshots">
+            <div class="screenshot-item">
+                <img src="phonep.png" alt="Скриншот телефона" />
+                <div class="screenshot-label">📱 Телефон</div>
+            </div>
+            <div class="screenshot-item">
+                <img src="komp.png" alt="Скриншот компьютера" />
+                <div class="screenshot-label">💻 Компьютер</div>
+            </div>
+        </div>
 
         <!-- ===== ДЕСКТОП ===== -->
         <div class="card">
